@@ -1,25 +1,15 @@
-import { useState } from 'react';
 import { colors, spacing, font } from '../theme';
 
-const sItem = (active) => ({
-  color: active ? colors.ink : colors.stone,
-  cursor: 'pointer',
-  textDecoration: 'none',
-  fontSize: '14px',
-});
-
-export default function Breadcrumb({ items }) {
-  const [active, setActive] = useState(items.length - 1);
-
+export function Breadcrumb({ items, onNavigate }) {
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: spacing.sm, fontSize: '14px' }}>
       {items.map((item, i) => (
         <span key={i} style={{ display: 'flex', alignItems: 'center', gap: spacing.sm }}>
+          {i > 0 && <span style={{ color: colors.stone }}>/</span>}
           <span
-            style={sItem(i === active)}
-            onClick={() => setActive(i)}
-          >{item}</span>
-          {i < items.length - 1 && <span style={{ color: colors.stone, fontSize: '14px' }}>/</span>}
+            style={{ color: item.active ? colors.ink : colors.stone, cursor: 'pointer', textDecoration: 'none', fontSize: '14px' }}
+            onClick={() => onNavigate?.(item)}
+          >{item.label}</span>
         </span>
       ))}
     </div>
