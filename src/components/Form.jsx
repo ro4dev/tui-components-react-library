@@ -93,8 +93,8 @@ export function RadioGroup({ options, value, onChange }) {
           }}
           onClick={() => { setSelected(opt.value); onChange?.(opt.value); }}
         >
-          <span style={{ color: selected === opt.value ? colors.ink : colors.mute, fontSize: '16px', lineHeight: 1 }}>
-            {selected === opt.value ? '(•)' : '( )'}
+          <span style={{ color: selected === opt.value ? colors.ink : colors.mute }}>
+            {selected === opt.value ? <span>(<span style={{ fontSize: '20px', lineHeight: 1, verticalAlign: 'middle' }}>•</span>)</span> : '( )'}
           </span>
           <span style={{ color: colors.body }}>{opt.label}</span>
         </div>
