@@ -11,7 +11,15 @@ export function ProgressBar({ value = 0 }) {
 export function Spinner({ label = 'Loading...' }) {
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: spacing.sm }}>
-      <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '20px', height: '20px', animation: 'spin 0.6s linear infinite', color: colors.mute, fontSize: '16px' }}>⟳</span>
+      <span style={{
+        display: 'inline-block',
+        width: '14px',
+        height: '14px',
+        border: '2px solid',
+        borderColor: `${colors.mute} ${colors.mute} ${colors.mute} transparent`,
+        borderRadius: '50%',
+        animation: 'spin 0.6s linear infinite',
+      }} />
       <span style={{ color: colors.mute, fontSize: '14px', fontFamily: font }}>{label}</span>
     </div>
   );
