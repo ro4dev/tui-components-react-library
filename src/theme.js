@@ -1,35 +1,35 @@
 export const colors = {
-  canvas: '#F5F2EB',
-  surfaceSoft: '#EDEAE3',
-  surfaceCard: '#E5E2DB',
-  surfaceDark: '#1A1A1A',
-  ink: '#111111',
-  body: '#2A2A2A',
-  mute: '#6B6B6B',
-  stone: '#8A8580',
-  ash: '#9A9590',
-  accent: '#007AFF',
-  warning: '#FF9500',
-  danger: '#FF3B30',
-  success: '#34C759',
-  hairline: '#D5D2CB',
-  hairlineStrong: '#B5B2AB',
-  onDark: '#F5F2EB',
-  inkDeep: 'rgba(0,0,0,0.6)',
+  canvas: 'var(--canvas)',
+  surfaceSoft: 'var(--surface-soft)',
+  surfaceCard: 'var(--surface-card)',
+  surfaceDark: 'var(--surface-dark)',
+  ink: 'var(--ink)',
+  body: 'var(--body)',
+  mute: 'var(--mute)',
+  stone: 'var(--stone)',
+  ash: 'var(--ash)',
+  accent: 'var(--accent)',
+  warning: 'var(--warning)',
+  danger: 'var(--danger)',
+  success: 'var(--success)',
+  hairline: 'var(--hairline)',
+  hairlineStrong: 'var(--hairline-strong)',
+  onDark: 'var(--on-dark)',
+  inkDeep: 'var(--ink-deep)',
 };
 
 export const spacing = {
-  xs: '4px',
-  sm: '8px',
-  md: '12px',
-  lg: '16px',
-  xl: '24px',
-  xxl: '32px',
+  xs: 'var(--spacing-xs)',
+  sm: 'var(--spacing-sm)',
+  md: 'var(--spacing-md)',
+  lg: 'var(--spacing-lg)',
+  xl: 'var(--spacing-xl)',
+  xxl: 'var(--spacing-xxl)',
 };
 
 export const radius = {
-  sm: '4px',
-  full: '9999px',
+  sm: 'var(--rounded-sm)',
+  full: 'var(--rounded-full)',
 };
 
-export const font = "'Berkeley Mono', 'SF Mono', 'Fira Code', monospace";
+export const font = 'var(--font-mono)';
