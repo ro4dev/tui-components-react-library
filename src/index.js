@@ -19,6 +19,6 @@ export { Panel, SplitPanel, ScrollArea } from './components/Panel';
 export { ProgressBar, ProgressBarControls, Spinner, ProgressSteps } from './components/Progress';
 export { default as Table } from './components/Table';
 export { TabStrip, TabPills } from './components/Tabs';
-export { ToggleAscii, ToggleSwitch } from './components/Toggle';
+export { Toggle } from './components/Toggle';
 export { default as Tooltip } from './components/Tooltip';
 export { colors, spacing, radius, font } from './theme';
