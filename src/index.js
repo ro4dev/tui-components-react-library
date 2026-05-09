@@ -1,5 +1,5 @@
 export { default as Accordion } from './components/Accordion';
-export { default as Alert, AlertBlock, AlertInline } from './components/Alert';
+export { Alert } from './components/Alert';
 export { default as Avatar, AvatarCircle, UserPill } from './components/Avatar';
 export { StatusBadge, LabelBadge, CounterBadge, InteractiveCounter } from './components/Badge';
 export { default as Breadcrumb } from './components/Breadcrumb';
