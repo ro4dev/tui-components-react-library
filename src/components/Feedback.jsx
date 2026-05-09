@@ -32,7 +32,7 @@ export function ToastContainer({ max = 5 }) {
   }, [max]);
 
   const toastBorderColors = {
-    info: colors.accent, success: colors.success, error: colors.danger, warning: colors.warning,
+    info: colors.accent, success: colors.success, danger: colors.danger, warning: colors.warning,
   };
 
   return (
