@@ -24,7 +24,7 @@ export function Tabs({ tabs, variant = 'strip', defaultTab, fullWidth }) {
               fontSize: isStrip ? '16px' : '14px',
               fontFamily: font,
               background: isStrip ? 'transparent' : (tab.id === active ? colors.ink : colors.surfaceSoft),
-              color: isStrip ? (tab.id === active ? colors.ink : colors.mute) : (tab.id === active ? colors.onDark : colors.mute),
+              color: isStrip ? (tab.id === active ? colors.ink : colors.mute) : (tab.id === active ? colors.canvas : colors.mute),
               borderRadius: isStrip ? 0 : radius.sm,
               borderBottom: isStrip ? (tab.id === active ? `2px solid ${colors.ink}` : '2px solid transparent') : 'none',
               marginBottom: isStrip ? '-2px' : 0,
