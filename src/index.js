@@ -7,7 +7,7 @@ export { CardFlat, CardHeader, CardDark, CardStats } from './components/Card';
 export { default as CodeBlock, InlineCode } from './components/CodeBlock';
 export { default as CopyButton } from './components/CopyButton';
 export { BulletList, NumberedList, DefinitionList, Tag, TagGroup } from './components/DataDisplay';
-export { default as Dialog } from './components/Dialog';
+export { Dialog } from './components/Dialog';
 export { default as EmptyState } from './components/EmptyState';
 export { Toast, ToastContainer, Skeleton, SkeletonCard } from './components/Feedback';
 export { SearchInput, Select, RadioGroup, FileUpload } from './components/Form';
