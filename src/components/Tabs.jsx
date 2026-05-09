@@ -1,76 +1,41 @@
 import { useState } from 'react';
 import { colors, spacing, radius, font } from '../theme';
 
-export function TabStrip({ tabs, activeTab, onChange }) {
-  const [active, setActive] = useState(activeTab || (tabs[0]?.id));
-
-  function handleClick(id) {
-    setActive(id);
-    onChange && onChange(id);
-  }
+export function Tabs({ tabs, variant = 'strip', defaultTab, fullWidth }) {
+  const [active, setActive] = useState(defaultTab ?? tabs[0]?.id);
+  const isStrip = variant === 'strip';
 
   return (
     <div>
       <div style={{
         display: 'flex',
-        gap: spacing.md,
-        borderBottom: `2px solid ${colors.hairlineStrong}`,
+        gap: isStrip ? spacing.md : spacing.xs,
+        flexWrap: isStrip ? 'nowrap' : 'wrap',
+        borderBottom: isStrip ? `2px solid ${colors.hairlineStrong}` : 'none',
       }}>
         {tabs.map(tab => (
           <div
             key={tab.id}
             style={{
-              padding: '8px 16px',
+              flex: fullWidth ? 1 : undefined,
+              textAlign: fullWidth ? 'center' : undefined,
+              padding: isStrip ? '8px 16px' : '4px 12px',
               cursor: 'pointer',
-              fontSize: '14px',
+              fontSize: isStrip ? '16px' : '14px',
               fontFamily: font,
-              color: tab.id === active ? colors.ink : colors.mute,
-              borderBottom: tab.id === active ? `2px solid ${colors.ink}` : '2px solid transparent',
-              marginBottom: '-2px',
+              background: isStrip ? 'transparent' : (tab.id === active ? colors.ink : colors.surfaceSoft),
+              color: isStrip ? (tab.id === active ? colors.ink : colors.mute) : (tab.id === active ? colors.onDark : colors.mute),
+              borderRadius: isStrip ? 0 : radius.sm,
+              borderBottom: isStrip ? (tab.id === active ? `2px solid ${colors.ink}` : '2px solid transparent') : 'none',
+              marginBottom: isStrip ? '-2px' : 0,
             }}
-            onClick={() => handleClick(tab.id)}
+            onClick={() => setActive(tab.id)}
           >{tab.label}</div>
         ))}
       </div>
       {tabs.map(tab => (
         <div key={tab.id} style={{ display: tab.id === active ? 'block' : 'none', padding: spacing.md, color: colors.body, fontSize: '14px' }}>
           {tab.content}
-        </div>
-      ))}
-    </div>
-  );
-}
-
-export function TabPills({ pills, activePill, onChange }) {
-  const [active, setActive] = useState(activePill || (pills[0]?.id));
-
-  function handleClick(id) {
-    setActive(id);
-    onChange && onChange(id);
-  }
-
-  return (
-    <div>
-      <div style={{ display: 'flex', gap: '4px' }}>
-        {pills.map(pill => (
-          <div
-            key={pill.id}
-            style={{
-              padding: '4px 12px',
-              borderRadius: radius.sm,
-              cursor: 'pointer',
-              fontSize: '14px',
-              fontFamily: font,
-              background: pill.id === active ? colors.ink : colors.surfaceSoft,
-              color: pill.id === active ? colors.onDark : colors.mute,
-            }}
-            onClick={() => handleClick(pill.id)}
-          >{pill.label}</div>
-        ))}
-      </div>
-      {pills.map(pill => (
-        <div key={pill.id} style={{ display: pill.id === active ? 'block' : 'none', padding: spacing.md, color: colors.body, fontSize: '14px' }}>
-          {pill.content}
         </div>
       ))}
     </div>
