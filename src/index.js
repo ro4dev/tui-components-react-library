@@ -9,7 +9,7 @@ export { default as CopyButton } from './components/CopyButton';
 export { BulletList, NumberedList, DefinitionList, Tag, TagGroup } from './components/DataDisplay';
 export { Dialog } from './components/Dialog';
 export { default as EmptyState } from './components/EmptyState';
-export { Toast, ToastContainer, Skeleton, SkeletonCard } from './components/Feedback';
+export { ToastContainer, Skeleton, toast } from './components/Feedback';
 export { SearchInput, Select, RadioGroup, FileUpload } from './components/Form';
 export { Kbd, KbdSequence, CommandPalette } from './components/Keyboard';
 export { DividerHorizontal, DividerVertical, Spacer, Container } from './components/Layout';
