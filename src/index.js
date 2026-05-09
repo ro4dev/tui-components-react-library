@@ -17,7 +17,7 @@ export { ImageBlock, VideoEmbed, Blockquote } from './components/Media';
 export { SidebarNav, Pagination, DropdownMenu, ContextMenu } from './components/Navigation';
 export { Panel, SplitPanel, ScrollArea } from './components/Panel';
 export { ProgressBar, ProgressBarControls, Spinner, ProgressSteps } from './components/Progress';
-export { default as Table } from './components/Table';
+export { Table } from './components/Table';
 export { Tabs } from './components/Tabs';
 export { Toggle } from './components/Toggle';
 export { default as Tooltip } from './components/Tooltip';
