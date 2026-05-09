@@ -6,7 +6,7 @@ export { default as Breadcrumb } from './components/Breadcrumb';
 export { CardFlat, CardHeader, CardDark, CardStats } from './components/Card';
 export { default as CodeBlock, InlineCode } from './components/CodeBlock';
 export { default as CopyButton } from './components/CopyButton';
-export { BulletList, NumberedList, DefinitionList, Tag, TagGroup } from './components/DataDisplay';
+export { ListItem, DefinitionList, Tag } from './components/DataDisplay';
 export { Dialog } from './components/Dialog';
 export { default as EmptyState } from './components/EmptyState';
 export { ToastContainer, Skeleton, toast } from './components/Feedback';
