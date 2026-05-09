@@ -39,7 +39,7 @@ export function Toggle({ label, description, defaultOn, variant = 'ascii', onCha
         >
           <div style={{
             width: '16px', height: '16px', borderRadius: '50%',
-            background: on ? colors.onDark : colors.mute,
+            background: on ? colors.canvas : colors.mute,
             position: 'absolute', top: '2px',
             left: on ? '22px' : '2px',
             transition: 'left 0.2s',
