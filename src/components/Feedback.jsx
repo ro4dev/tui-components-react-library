@@ -55,7 +55,7 @@ export function ToastContainer({ max = 5 }) {
             }}
             onClick={() => setToasts(prev => prev.filter(x => x.id !== t.id))}
           >[×]</button>
-          {t.message}
+          <span style={{ paddingRight: '24px', display: 'block' }}>{t.message}</span>
         </div>
       ))}
     </div>
