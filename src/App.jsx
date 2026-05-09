@@ -297,7 +297,7 @@ export default function App() {
         </div>
         <div style={{ marginTop: spacing.md }}>
           <ScrollArea height="150px">
-            <p>Line 1: import { defineConfig } from 'vite';</p>
+            <p>Line 1: import {'{'} defineConfig {'}'} from 'vite';</p>
             <p>Line 2: import react from '@vitejs/plugin-react';</p>
             <p>Line 3: export default defineConfig({'{'}</p>
             <p>Line 4:   plugins: [react()],</p>
