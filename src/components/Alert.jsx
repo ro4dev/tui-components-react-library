@@ -35,13 +35,13 @@ export function Alert({ type = 'info', title, children, onDismiss, inline }) {
     <div style={{
       background: colors.surfaceSoft,
       borderRadius: radius.sm,
-      padding: `${spacing.md} ${spacing.lg}`,
+      padding: removing ? '0 16px' : `${spacing.md} ${spacing.lg}`,
       position: 'relative',
-      borderLeft: `3px solid ${iconColor}`,
+      borderLeft: `3px solid ${removing ? 'transparent' : iconColor}`,
       opacity: removing ? 0 : 1,
-      transform: removing ? 'translateX(100%)' : 'none',
-      transition: 'opacity 0.3s, transform 0.3s',
+      maxHeight: removing ? 0 : '999px',
       overflow: 'hidden',
+      transition: 'opacity 0.3s, max-height 0.3s, padding 0.3s',
     }}>
       <button
         style={{
